@@ -1,0 +1,69 @@
+body {
+  width: 770px;
+  font-family: Arial;
+  color: black;
+  font-size: 1.5em;
+}
+
+img {
+  width: 385px;
+}
+
+p {
+  margin-top: 0.5em;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
+table a {
+  color: green;
+}
+
+.navbar {
+  width: 770px;
+  height: 100px;
+  background-image: url("images/cabecera.png");
+}
+
+.navbar a:hover {
+  background-color: #cccccc;
+}
+
+.main {
+  background-color: #5FCDD9;
+  width: 385px;
+  float: left;
+}
+
+.secondary {
+  width: 255px;
+  background-color: #04BFAD;
+  float: left;
+}
+
+.menu ul li {
+  padding: 0.3em;
+  margin-bottom: 0.7em;
+}
+
+.links {
+  background-color: #027373;
+  float: right;
+  width: 130px;
+}
+
+.footer {
+  background-color: #5FCDD9;
+  display: inline-block;
+  width: 770px;
+}
