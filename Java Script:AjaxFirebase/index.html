@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home</title>
+  </head>
+  <body class="grey darken-2">
+
+    <div>
+      <nav class="grey darken-4">
+        <div class="nav-wrapper">
+          
+          <a href="#" class="brand-logo left">
+            <img src="img/logo.png" class="responsive-img logo-img">
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <br>
+    <!-- Ejercicio 1 -->
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Formulario</span>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="dni" type="text" class="validate">
+                    <label for="dni">DNI</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Ejemplo: 12345678A</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="fechaNacimiento" type="date" class="validate">
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="cuenta" type="text" class="validate">
+                    <label for="cuenta">Cuenta</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="importe" type="text" class="validate">
+                    <label for="importe">Importe</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="descuento" type="text" class="validate">
+                    <label for="descuento">Descuento</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Ejemplo: 0.2</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="modalidadPago" type="text" class="validate">
+                    <label for="modalidadPago">Modalidad de pago</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="fechaPago" type="date" class="validate">
+                    <label for="fechaPago">Fecha de pago</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s4">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="sendBTN">Enviar
+                      <i class="material-icons right">send</i>
+                  </div>
+                  <div class="input-field col s4">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="resetBTN">Limpiar
+                      <i class="material-icons right">clear</i>
+                  </div>
+                  <div class="input-field col s4">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="receiveBTN">Recibir
+                      <i class="material-icons right">get_app</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6" id="resultado-div">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title" id="resultado">Resultado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus labore laboriosam? Ipsa sint sed doloremque nam id consequatur dolor sit minus, qui autem pariatur dolore eaque totam dignissimos a!</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2022 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBhQ0JWIwdgv4EmtmU96euFxfQxGxpji_A",
+        authDomain: "ua---grupo-8.firebaseapp.com",
+        projectId: "ua---grupo-8",
+        storageBucket: "ua---grupo-8.appspot.com",
+        messagingSenderId: "110364451015",
+        appId: "1:110364451015:web:899fefc6c7d64fe419dee2",
+        measurementId: "G-KKNZEPVCWW"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Add info to the database
+      function sendData() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        var cuenta = document.getElementById("cuenta").value;
+        var importe = document.getElementById("importe").value;
+        var descuento = document.getElementById("descuento").value;
+        var modalidadPago = document.getElementById("modalidadPago").value;
+        var fechaPago = document.getElementById("fechaPago").value;
+        var data = {
+          nombre: nombre,
+          apellido: apellido,
+          fechaNacimiento: fechaNacimiento,
+          cuenta: cuenta,
+          importe: importe,
+          descuento: descuento,
+          modalidadPago: modalidadPago,
+          fechaPago: fechaPago
+        };
+        firebase.database().ref('/').push(data);
+      }
+
+      // Update the database with the info from the form
+      function updateData() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        var cuenta = document.getElementById("cuenta").value;
+        var importe = document.getElementById("importe").value;
+        var descuento = document.getElementById("descuento").value;
+        var modalidadPago = document.getElementById("modalidadPago").value;
+        var fechaPago = document.getElementById("fechaPago").value;
+        
+        var data = {
+          nombre: nombre,
+          apellido: apellido,
+          fechaNacimiento: fechaNacimiento,
+          cuenta: cuenta,
+          importe: importe,
+          descuento: descuento,
+          modalidadPago: modalidadPago,
+          fechaPago: fechaPago
+        };
+        firebase.database().ref('/').update(data);
+      }
+
+      // Remove the info from the database
+      function removeData() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        var cuenta = document.getElementById("cuenta").value;
+        var importe = document.getElementById("importe").value;
+        var descuento = document.getElementById("descuento").value;
+        var modalidadPago = document.getElementById("modalidadPago").value;
+        var fechaPago = document.getElementById("fechaPago").value;
+        
+        var data = {
+          nombre: nombre,
+          apellido: apellido,
+          fechaNacimiento: fechaNacimiento,
+          cuenta: cuenta,
+          importe: importe,
+          descuento: descuento,
+          modalidadPago: modalidadPago,
+          fechaPago: fechaPago
+        };
+        firebase.database().ref('/').remove(data);
+      }
+
+      // Get the info from the database
+      function getData() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        var cuenta = document.getElementById("cuenta").value;
+        var importe = document.getElementById("importe").value;
+        var descuento = document.getElementById("descuento").value;
+        var modalidadPago = document.getElementById("modalidadPago").value;
+        var fechaPago = document.getElementById("fechaPago").value;
+        
+        var data = {
+          nombre: nombre,
+          apellido: apellido,
+          fechaNacimiento: fechaNacimiento,
+          cuenta: cuenta,
+          importe: importe,
+          descuento: descuento,
+          modalidadPago: modalidadPago,
+          fechaPago: fechaPago
+        };
+      }
+    </script>
+  </body>
+</html>
